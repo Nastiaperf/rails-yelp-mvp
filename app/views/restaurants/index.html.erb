@@ -1,11 +1,26 @@
-<div class="container">
-  <h1>Restaurants</h1>
+<div class="mx-auto my-3 container">
+  <div class="card-header d-flex justify-content-between">
+    <h1>Restaurants</h1>
 
-  <%= link_to "Add a new restaurant", new_restaurant_path, class: "btn btn-primary" %>
+    <%= link_to "Add a new restaurant", new_restaurant_path, class: "btn btn-primary align-middle" %>
+  </div>
 
-  <ul class="list-unstyled">
+  <ul class="mx-auto my-3 list-unstyled text-center">
     <% @restaurants.each do |restaurant| %>
       <li><%= link_to restaurant.name, restaurant_path(restaurant) %></li>
     <% end %>
   </ul>
+
+<div class="footer card-footer d-flex justify-content-between my-50 text-muted bg-">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="footer-copyright">
+    This footer is made with <i class="fas fa-heart"></i> at Le Wagon
+  </div>
+</div>
 </div>
